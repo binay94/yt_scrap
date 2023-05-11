@@ -14,16 +14,15 @@
 
 ### Homepage:
 
-
-
+![Homepage](https://github.com/binay94/yt_scrap/assets/116953493/0de7223e-2d8b-43b9-a99e-a320c4f57e1a)
 
 ### Video Details:
 
-
+![videodetails](https://github.com/binay94/yt_scrap/assets/116953493/723f0d85-ca20-4832-a122-546479f5cfc1)
 
 ### Mongo DB:
 
-
+![Mongodb op](https://github.com/binay94/yt_scrap/assets/116953493/3cfdf533-66f1-464c-a2c5-ff3c7f1d7d01)
 
 ### AWS Beanstalk Deployment:
 
