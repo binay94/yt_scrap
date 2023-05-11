@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>YouTube Video Details and Channel Statistics</title>
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Arial, sans-serif;
+			background-color: #acaed5;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.container {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+		
+		.box {
+			background-color: #0b179f;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 40px;
+			flex-basis: 100%;
+		}
+
+		h1 {
+			font-size: 35px;
+			color:chartreuse;
+			margin: 0;
+			text-align: center;
+		}
+
+		h2 {
+			font-size: 25px;
+			margin: 0;
+			color:black;
+			text-align: center;
+		}
+		
+		.form-wrapper {
+			
+			margin-bottom: 40px;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+  			justify-content: flex-start;
+		}
+		
+		.form-wrapper h2 {
+			margin-bottom: 20px;
+		}
+		
+		.form-wrapper input[type="text"] {
+			color:darkgoldenrod;
+			padding: 10px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 20px;
+		}
+		
+		.form-wrapper input[type="submit"] {
+			padding: 10px 20px;
+			background-color:dodgerblue;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+		
+		.form-wrapper input[type="submit"]:hover {
+			background-color:aquamarine;
+		}
+		
+		.select-wrapper {
+			
+			margin-bottom: 40px;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+  			justify-content: flex-start;
+		}
+		
+		.select-wrapper h2 {
+			margin-bottom: 20px;
+		}
+		
+		.select-wrapper select {
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			margin-bottom: 20px;
+		}
+		
+		.select-wrapper input[type="submit"] {
+			padding: 10px 20px;
+			background-color:dodgerblue;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+		
+		.select-wrapper input[type="submit"]:hover {
+			background-color:aquamarine;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<h1>Welcome to Youtube Data Scraping API</h1>
+		</div>
+		<div class="form-wrapper">
+			<h2>Enter the URL of the YouTube video:</h2>
+			<form method="POST" action="/video_details">
+				<input type="text" name="video_url" placeholder="Enter Youtube URL">
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<div class="select-wrapper">
+			<h2>Select a YouTube channel:</h2>
+			<form method="POST" action="/stats">
+				<select name="channel">
+					<option value="channel1">College Wallah</option>
+					<option value="channel2">iNeuron Intelligence</option>
+					<option value="channel3">Krish Naik</option>
+				</select>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+

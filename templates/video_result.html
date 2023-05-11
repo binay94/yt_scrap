@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Details</title>
+    <style>
+        body {
+            background-color:rgb(122, 223, 194);
+            color:rgb(57, 7, 175)
+        }
+        ul {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4 my-2 p-1">
+            <img src="{{ video_details['Thumbnail'] }}" alt="Video Thumbnail" class="img-fluid" style="float:right; width:250px; height:200px;">
+        </div>
+        <div class="col-md-8 my-2 p-1">
+            <h1 class="text-center">{{ video_details['Title'] }}</h1>
+            <h2>Video Details:</h2>            
+        </div>
+    </div>
+    <style>
+        ul {
+            font-size: 18px;
+        }
+    </style>
+    <div>
+        <ul>
+            <li><strong>Channel Name:</strong> {{ video_details['Channel Name'] }}</li>
+            <li><strong>Published Date:</strong> {{ video_details['Published Date'] }}</li>
+            <li><strong>Duration:</strong> {{ video_details['Duration'] }}</li>            
+            <li><strong>Views:</strong> {{ video_details['Views'] }}</li>
+            <li><strong>Comments:</strong> {{ video_details['Comment_Count'] }}</li>
+            <li><strong>Likes:</strong> {{ video_details['Likes'] }}</li>
+            <li><strong>Tags:</strong> {% for tag in video_details['Tags'] %} {{ tag }} {% endfor %}</li>
+        </ul>
+    </div>
+        
+    <hr>
+    <h3>Comments</h3>
+    {% for comment in comments_list %}
+        <div>
+            <p style="font-size: 18px;"><strong>{{ comment['Author'] }}</strong>: {{ comment['Comment'] }}</p>
+            <p style="font-size: 18px;"><strong>Likes:</strong> {{ comment['Likes'] }}</p>
+            <p style="font-size: 18px;"><strong>Date & Time:</strong> {{ comment['Time'] }}</p>
+            {% if comment['replies'] %}
+                <ul>
+                    {% for reply in comment['replies'] %}
+                        <li><strong>{{ reply['Replied_By'] }}</strong>: {{ reply['Reply'] }}</li>
+                        <li><strong>Likes:</strong> {{ reply['reply_likes'] }}</li>
+                        <li><strong>Date & Time</strong>: {{ reply['Time'] }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <hr>
+    {% endfor %}
+</body>
+</html>
