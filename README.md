@@ -26,3 +26,4 @@
 
 ### AWS Beanstalk Deployment:
 
+![aws](https://github.com/binay94/yt_scrap/assets/116953493/fa7a0809-2869-4289-ba6a-de0f83ff0d6b)
