@@ -10,6 +10,27 @@
 8. The application uses logging to log all the information.
 9. Data is scraped only for learning purpose and is deleted and app removed from deployed server.
 
+## Project Structure :
+
+
+        project_root/
+        │
+        ├── .ebextensions/
+        │   └── python.config       # Configuration for AWS Elastic Beanstalk deployment
+        │
+        ├── .elasticbeanstalk/
+        │   └── config.yml          # Elastic Beanstalk configuration settings
+        │
+        ├── application.py          # Flask Application 
+        ├── build.py                # creates a connection to the YouTube Data API using an API key, facilitating interactions with 
+                                      the API for retrieving channel and video details.
+        ├── credentials.py          # Module for managing credentials (e.g., API keys)
+        ├── mongo_op.py             # Module for uploading the retrieved data to MongoDB (Mongo operations)
+        ├── requirements.txt        # List of Python dependencies
+        └── utility.py              # Module containing general utility functions
+
+
+
 ## Output as shown below.
 
 ### Homepage:
